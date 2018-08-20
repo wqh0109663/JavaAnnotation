@@ -20,6 +20,62 @@
 
 ####  注解深度解析
 * 源码
+  * 首先来看@Override
+  * 源码很简单:
+  ```java
+@Target({ElementType.METHOD})
+@Retention(RetentionPolicy.SOURCE)
+public @interface Override {
+}
+  ```
+  *  再来看看使用这个注解
+
+    <!-- lang: Java -->
+    ```Java
+         package demo;
+
+            /**
+             - @author wqh
+             - @date 18-8-20
+            */
+
+          public class User {
+              private Integer id;
+              private String username;
+              @Override
+              public String toString() {
+                  return "User{" +
+                          "id=" + id +
+                          ", username='" + username + '\'' +
+                          '}';
+              }
+              public Integer getId() {
+                  return id;
+              }
+              public void setId(Integer id) {
+                  this.id = id;
+              }
+              public String getUsername() {
+                  return username;
+              }
+              public void setUsername(String username) {
+                  this.username = username;
+              }
+          }
+      ```
+    * 顺带提一句MarkDown中代码块高亮使用的是:
+      - `` <!-- lang:java --> ``如果要代码高亮就在第一行加上第三种就可以实现
+      - ``<p>`` 当然前面一个就要加上三个反引号`
+      - 直接使用三个反引号加上语言类型也是可行的
+    * 问题就来了，加上了@Override注解编译器
+
+    * 需要预备的知识点包含动态代理和反射
+    * 首先来看Java中的动态代理
+      * 代码
+    * 然后就是反射
+
+
+
 * Spring的部分注解探究
 #####  自定义注解
 * 如何自定义一个注解
