@@ -31,8 +31,8 @@ public @interface Override {
   ```
   *  再来看看使用这个注解
 
-    <!-- lang: Java -->
-    ```Java
+ <!-- lang: Java -->
+ ```Java
          package demo;
 
             /**
@@ -63,7 +63,7 @@ public @interface Override {
                   this.username = username;
               }
           }
-      ```
+```
     * 顺带提一句MarkDown中代码块高亮使用的是:
       - `` <!-- lang:java --> ``如果要代码高亮就在第一行加上第三种就可以实现
       - ``<p>`` 当然前面一个就要加上三个反引号`
